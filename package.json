@@ -1,5 +1,9 @@
 {
-    "name": "preentrega1matute",
-    "version": "1.0.0",
-    "description": "preentrega1matute"
-}
+    "posts": [
+      { "id": 1, "title": "json-server", "author": "leonardo Matute" }
+    ],
+    "comments": [
+      { "id": 1, "body": "Hello", "postId": 1 }
+    ],
+    "profile": { "name": "Leonardo Matute" }
+  }

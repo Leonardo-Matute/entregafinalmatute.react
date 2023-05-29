@@ -1,16 +1,43 @@
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+// import App from './App';
+import LabelComponent from "./components/LabelComponent";
+import ButtonComponent from "./components/ButtonComponent";
+import NavBar from "./components/NavBar";
 
-function App() {
+const AppCounter = () => {
+  const [count, setCount] = useState(0);
 
-  const myFunction = () => {
-    console.log("Hola a todos")
+  const handleSumar = () => {
+    setCount(count + 1);
   };
-  
+
+  const handleRestar = () => {
+    setCount(count - 1);
+  };
+
   return (
     <div className="App">
-      <button onClick={myFunction}>Hola Mundo</button>
+      <NavBar />
+
+
+      {/* <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100vw",
+          height: "100vh",
+        }}
+      >
+        <button onClick={handleRestar}>-</button>
+        <span>{count}</span>
+        <button onClick={handleSumar}>+</button>
+        <ButtonComponent />
+        <LabelComponent />
+      </div> */}
     </div>
   );
-}
+};
 
-export default App;npm 
+export default AppCounter;

@@ -1,17 +1,9 @@
-import React from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
-import { useParams } from "react-router-dom";
+import React from 'react'
 
-function ItemDetailContainer() {
-  const { itemId } = useParams();
-
-
-
-  return <>
-  <div className="flex justify-center items-center h-screen">
-    {itemId && <ItemDetail itemId={itemId} />}
-    </div>
-    </>;
+const ItemListContainer = ({greeting}) => {
+  return (
+    <div style={{color:"blue", backgroundcolor: "black", fontSize:"1.5 rem"}}>{greeting}</div>
+  )
 }
 
-export default ItemDetailContainer;
+export default ItemListContainer
