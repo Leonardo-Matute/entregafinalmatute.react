@@ -1,43 +1,16 @@
-import { useState } from "react";
 import "./App.css";
-// import App from './App';
-import LabelComponent from "./components/LabelComponent";
-import ButtonComponent from "./components/ButtonComponent";
-import NavBar from "./components/NavBar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const AppCounter = () => {
-  const [count, setCount] = useState(0);
+import MainRouter from "./routes/MainRouter";
 
-  const handleSumar = () => {
-    setCount(count + 1);
-  };
-
-  const handleRestar = () => {
-    setCount(count - 1);
-  };
+const App = () => {
 
   return (
     <div className="App">
-      <NavBar />
-
-
-      {/* <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100vw",
-          height: "100vh",
-        }}
-      >
-        <button onClick={handleRestar}>-</button>
-        <span>{count}</span>
-        <button onClick={handleSumar}>+</button>
-        <ButtonComponent />
-        <LabelComponent />
-      </div> */}
+      <MainRouter />
+      
     </div>
   );
 };
 
-export default AppCounter;
+export default App;
