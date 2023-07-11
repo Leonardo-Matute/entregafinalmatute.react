@@ -1,0 +1,19 @@
+.cardsWrapper {
+    width: 40%;
+    height: fit-content;
+}
+
+.itemWrapper {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.cardImage {
+  width: 90px;
+  height: 90px;
+}
+
+.productInfo {
+    padding-left: 30px;
+}
