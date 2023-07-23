@@ -1,16 +1,23 @@
-import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './NavBar/NavBar'; 
+import Home from './Pages/Home';
+import Category from './Pages/Category';
+import ItemDetail from './Pages/Item';
+import NotFound from './Pages/NotFound';
 
-import MainRouter from "./routes/MainRouter";
-
-const App = () => {
-
+const MainRouter = () => {
   return (
-    <div className="App">
-      <MainRouter />
-      
-    </div>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/category/:categoryId" element={<Category />} />
+        <Route path="/item/:itemId" element={<items/>} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 };
 
-export default App;
+export default MainRouter;
